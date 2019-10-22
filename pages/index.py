@@ -29,17 +29,25 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Value Proposition
+            ## Improveing Your Chances
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            Using Mr.Acceptor will hellp you the user to to improve your likelyhood of getting into your graduating university.
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
+            This is my first app I have made duing my short but amazing journey At Lambda Bootcamp. This is my second project in the course and shows just how far i have come in the last 6 weeks!!!
 
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            To the right is A graphical representation of the data I used to train this application that I made.
 
             """
         ),
-        dcc.Link(dbc.Button('Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Try It', color='primary'), href='/predictions'),
+        dcc.Markdown(
+            """
+
+            Just click the button below to see my code for this project.
+
+            """
+        ),
+        dcc.Link(dbc.Button('My Code', color='primary'), href='/process'),
     ],
     md=4,
 )

@@ -8,6 +8,7 @@ from app import app
 
 column1 = dbc.Col(
     [
+        html.Img(src='assets/download.html', className='img-fluid'),
         dcc.Markdown(
             """
         
