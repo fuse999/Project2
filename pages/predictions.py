@@ -8,7 +8,7 @@ from app import app
 
 column1 = dbc.Col(
     [
-        html.Img(src='assets/download.html', className='img-fluid'),
+        html.Img(src='assets/apripoko.jpg', className='img-fluid'),
         dcc.Markdown(
             """
         

@@ -4,6 +4,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
+import pandas as pd
 
 from app import app
 
@@ -52,9 +53,14 @@ column1 = dbc.Col(
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+df_with_pred = pd.read_csv('Pred_Data.csv')
+# Making easy filters
+cpass = df_with_pred['decision'] == 0
+cfail = df_with_pred['decision'] == 1
+right = (cpass) == (df_with_pred['pred_proba'] > 0.50)
+wrong = ~right
+fig = px.scatter(df_with_pred, x="decision", y="gre_awa", color="pred_proba",
+           hover_name="degree", log_x=True, size_max=60)
 
 column2 = dbc.Col(
     [
