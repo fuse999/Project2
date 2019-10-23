@@ -60,7 +60,7 @@ cfail = df_with_pred['decision'] == 1
 right = (cpass) == (df_with_pred['pred_proba'] > 0.50)
 wrong = ~right
 
-fig = px.scatter(df_with_pred, x="decision", y="gre_quant", color="pred_proba",
+fig = px.scatter(df_with_pred, x="pred_proba", y="gre_quant", color="decision",
            hover_name="degree")
 
 
