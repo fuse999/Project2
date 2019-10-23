@@ -32,7 +32,7 @@ column1 = dbc.Col(
         
             ## Improveing Your Chances
 
-            Using Mr.Acceptor will hellp you the user to to improve your likelyhood of getting into your graduating university.
+            Using Mr.Acceptor will hellp you to to improve your likelyhood of getting into your graduating university.
 
             This is my first app I have made duing my short but amazing journey At Lambda Bootcamp. This is my second project in the course and shows just how far i have come in the last 6 weeks!!!
 
@@ -59,8 +59,10 @@ cpass = df_with_pred['decision'] == 0
 cfail = df_with_pred['decision'] == 1
 right = (cpass) == (df_with_pred['pred_proba'] > 0.50)
 wrong = ~right
-fig = px.scatter(df_with_pred, x="decision", y="gre_awa", color="pred_proba",
-           hover_name="degree", log_x=True, size_max=60)
+
+fig = px.scatter(df_with_pred, x="decision", y="gre_quant", color="pred_proba",
+           hover_name="degree")
+
 
 column2 = dbc.Col(
     [
