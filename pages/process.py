@@ -19,6 +19,10 @@ column1 = dbc.Col(
 
             https://drive.google.com/file/d/136XggGZLLYWE9vldAQwJ0XRLSYohzK26/view?usp=sharing
 
+            Data link
+
+            https://www.kaggle.com/karun95/gradcafe-computer-science-results
+
 
             """
         ),
