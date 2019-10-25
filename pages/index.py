@@ -53,14 +53,8 @@ column1 = dbc.Col(
     md=4,
 )
 
-df_with_pred = pd.read_csv('Pred_Data.csv')
-# Making easy filters
-cpass = df_with_pred['decision'] == 0
-cfail = df_with_pred['decision'] == 1
-right = (cpass) == (df_with_pred['pred_proba'] > 0.50)
-wrong = ~right
-
-fig = px.scatter(df_with_pred, x="pred_proba", y="gre_quant", color="decision",
+df_with_pred = pd.read_csv('Prediction.csv')
+fig = px.scatter(df_with_pred, x="pred_proba", y="undergrad_gpa", color="decision",
            hover_name="degree")
 
 

@@ -11,7 +11,13 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Process
+            ## Prediction and graph code
+
+            https://github.com/fuse999/Project2
+
+            or
+
+            https://drive.google.com/file/d/136XggGZLLYWE9vldAQwJ0XRLSYohzK26/view?usp=sharing
 
 
             """
